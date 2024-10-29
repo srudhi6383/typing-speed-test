@@ -1,4 +1,3 @@
-// App.js
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import "./App.css";
 
@@ -91,7 +90,7 @@ function App() {
 
   const calculateWPM = useCallback(() => {
     const endTime = new Date().getTime();
-    const timeTaken = (endTime - startTimeRef.current) / 1000 / 60; // in minutes
+    const timeTaken = (endTime - startTimeRef.current) / 1000 / 60; 
     const wordsPerMinute = correctWordCount / timeTaken;
     setWpm(wordsPerMinute.toFixed(2));
   }, [correctWordCount]);
